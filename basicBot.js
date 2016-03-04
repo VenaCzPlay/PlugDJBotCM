@@ -963,7 +963,7 @@
             if (typeof lastplay === 'undefined') return;
             if (basicBot.settings.songstats) {
                 if (typeof basicBot.chat.songstatistics === "undefined") {
-                    API.sendChat("/me " + lastplay.media.author + " - " + lastplay.media.title + ": " + lastplay.score.positive + "W/" + lastplay.score.grabs + "G/" + lastplay.score.negative + "M.")
+                    API.sendChat("/me " + lastplay.media.author + " - " + lastplay.media.title + ": " + lastplay.score.positive + "Wooty/" + lastplay.score.grabs + "Přidání/" + lastplay.score.negative + "Mehy.")
                 }
                 else {
                     API.sendChat(subChat(basicBot.chat.songstatistics, {artist: lastplay.media.author, title: lastplay.media.title, woots: lastplay.score.positive, grabs: lastplay.score.grabs, mehs: lastplay.score.negative}))
@@ -1072,7 +1072,7 @@
                 basicBot.room.autoskipTimer = setTimeout(function() {
                     var endcid = API.getMedia().cid;
                     if (startcid === endcid) {
-                        //API.sendChat('Song stuck, skipping...');
+                        API.sendChat('Skladba se zasekla, preskakuji...');
                         API.moderateForceSkip();
                     }
                 }, remaining + 5000);
@@ -1173,7 +1173,7 @@
                 if (basicBot.settings.cmdDeletion && msg.startsWith(basicBot.settings.commandLiteral)) {
                     API.moderateDeleteChat(chat.cid);
                 }
-                /**
+                
                  var plugRoomLinkPatt = /(\bhttps?:\/\/(www.)?plug\.dj[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
                  if (plugRoomLinkPatt.exec(msg)) {
                     if (perm === 0) {
@@ -1182,7 +1182,7 @@
                         return true;
                     }
                 }
-                 **/
+                 
                 if (msg.indexOf('http://adf.ly/') > -1) {
                     API.moderateDeleteChat(chat.cid);
                     API.sendChat(subChat(basicBot.chat.adfly, {name: chat.un}));
@@ -1277,7 +1277,8 @@
                 if (chat.type === 'message') {
                     for (var j = 0; j < basicBot.room.users.length; j++) {
                         if (basicBot.userUtilities.getUser(basicBot.room.users[j]).id === chat.uid) {
-                            basicBot.userUtilities.setLastActivity(basicBot.room.users[j]);
+                            basicBot.userUtilities.setLastActivity(basicBot.room.users[j];
+							API.sendChat("/me Hele, nadávání či spam je zakázán! Za opakované porušení bude mute!")
                         }
 
                     }
@@ -1345,8 +1346,6 @@
                 return 'Function.'
             };
             var u = API.getUser();
-            if (basicBot.userUtilities.getPermission(u) < 2) return API.chatLog(basicBot.chat.greyuser);
-            if (basicBot.userUtilities.getPermission(u) === 2) API.chatLog(basicBot.chat.bouncer);
             basicBot.connectAPI();
             API.moderateDeleteChat = function (cid) {
                 $.ajax({
@@ -1850,7 +1849,7 @@
 
             botnameCommand: {
                 command: 'botname',
-                rank: 'manager',
+                rank: 'bouncer',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
