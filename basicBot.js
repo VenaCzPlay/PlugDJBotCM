@@ -1277,8 +1277,7 @@
                 if (chat.type === 'message') {
                     for (var j = 0; j < basicBot.room.users.length; j++) {
                         if (basicBot.userUtilities.getUser(basicBot.room.users[j]).id === chat.uid) {
-                            basicBot.userUtilities.setLastActivity(basicBot.room.users[j] {
-							API.sendChat("/me Hele, nadávání či spam je zakázán! Za opakované porušení bude mute!");
+                            basicBot.userUtilities.setLastActivity(basicBot.room.users[j]);
                         }
 
                     }
