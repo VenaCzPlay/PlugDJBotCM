@@ -237,22 +237,22 @@
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "2.8.15",
+        version: "2.9.1",
         status: false,
-        name: "CMBot",
+        name: "CM Bot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/bscBot/source/master/basicBot.js",
+        scriptLink: "https://rawgit.com/VenaCzPlay/PlugDJBotCM/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/bscBot/source/master/lang/cs.json",
+        chatLink: "https://rawgit.com/VenaCzPlay/PlugDJBotCM/master/lang/cs.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "DinoBOT",
+            botName: "CM Bot",
             language: "czech",
-            chatLink: "https://rawgit.com/bscBot/source/master/lang/cs.json",
-            scriptLink: "https://rawgit.com/bscBot/source/master/basicBot.js",
+            chatLink: "https://rawgit.com/VenaCzPlay/PlugDJBotCM/master/lang/cs.json",
+            scriptLink: "https://rawgit.com/VenaCzPlay/PlugDJBotCM/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 40, // 1-200
             startupVolume: 100, // 0-100
@@ -283,13 +283,13 @@
             thorCooldown: 10,
             skipPosition: 3,
             skipReasons: [
-                ["theme", "Tato pisnicka se nehodi na tema teto roomky. "],
+                ["tema", "Tato pisnicka se nehodi na tema teto roomky. "],
                 ["op", "Tato pisnicka je na Operator List. "],
-                ["history", "This song is in the history. "],
-                ["mix", "You played a mix, which is against the rules. "],
-                ["sound", "The song you played had bad sound quality or no sound. "],
-                ["nsfw", "The song you contained was NSFW (image or sound). "],
-                ["unavailable", "The song you played was not available for some users. "]
+                ["historie", "This song is in the history. "],
+                ["mix", "Hral jsi mix! To je proti pravidlum. "],
+                ["zvuk", "Pisnicka ma blbou kvalitu zvuku nebo zadnou. "],
+                ["18", "Tato pisnicka se nehodi pro mladci uzivatele "],
+                ["nedostupne", "Tato pisnicka je pro nektere uzivatele nedustupna. "]
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
