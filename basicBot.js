@@ -100,7 +100,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/bscBot/source/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/VenaCzPlay/PlugDJBotCM/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -2474,7 +2474,7 @@
                         if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.currentlang, {language: basicBot.settings.language}));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get("https://rawgit.com/bscBot/source/master/lang/langIndex.json", function (json) {
+                        $.get("https://rawgit.com/VenaCzPlay/PlugDJBotCM/master/lang/langIndex.json", function (json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === "undefined") {
@@ -2976,7 +2976,7 @@
             },
 
             rouletteCommand: {
-                command: 'roulette',
+                command: 'ruleta',
                 rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -3729,51 +3729,6 @@
 
                                 API.sendChat(subChat(basicBot.chat.whois, {name1: chat.un, name2: name, id: id, avatar: avatar, profile: profile, language: language, level: level, joined: joined, rank: rank}));
                             }
-                        }
-                    }
-                }
-            },
-            rouletteCommand: {
-                command: 'roulette',
-                rank: 'mod',
-                type: 'exact',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        if (!basicBot.room.roulette.rouletteStatus) {
-                            basicBot.room.roulette.startRoulette();
-                        }
-                    }
-                }
-            },
-            joinCommand: {
-                command: 'join',
-                rank: 'user',
-                type: 'exact',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        if (basicBot.room.roulette.rouletteStatus && basicBot.room.roulette.participants.indexOf(chat.uid) < 0) {
-                            basicBot.room.roulette.participants.push(chat.uid);
-                            API.sendChat(subChat(basicBot.chat.roulettejoin, {name: chat.un}));
-                        }
-                    }
-                }
-            },
-            leaveCommand: {
-                command: 'leave',
-                rank: 'user',
-                type: 'exact',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        var ind = basicBot.room.roulette.participants.indexOf(chat.uid);
-                        if (ind > -1) {
-                            basicBot.room.roulette.participants.splice(ind, 1);
-                            API.sendChat(subChat(basicBot.chat.rouletteleave, {name: chat.un}));
                         }
                     }
                 }
