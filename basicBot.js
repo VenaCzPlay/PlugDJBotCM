@@ -131,53 +131,6 @@
         }
     };
 
-    var retrieveFromStorage = function () {
-        var info = localStorage.getItem("basicBotStorageInfo");
-        if (info === null) API.chatLog(basicBot.chat.nodatafound);
-        else {
-            var settings = JSON.parse(localStorage.getItem("basicBotsettings"));
-            var room = JSON.parse(localStorage.getItem("basicBotRoom"));
-            var elapsed = Date.now() - JSON.parse(info).time;
-            if ((elapsed < 1 * 60 * 60 * 1000)) {
-                API.chatLog(basicBot.chat.retrievingdata);
-                for (var prop in settings) {
-                    basicBot.settings[prop] = settings[prop];
-                }
-                basicBot.room.users = room.users;
-                basicBot.room.afkList = room.afkList;
-                basicBot.room.historyList = room.historyList;
-                basicBot.room.mutedUsers = room.mutedUsers;
-                //basicBot.room.autoskip = room.autoskip;
-                basicBot.room.roomstats = room.roomstats;
-                basicBot.room.messages = room.messages;
-                basicBot.room.queue = room.queue;
-                basicBot.room.newBlacklisted = room.newBlacklisted;
-                API.chatLog(basicBot.chat.datarestored);
-            }
-        }
-        var json_sett = null;
-        var roominfo = document.getElementById("room-settings");
-        info = roominfo.textContent;
-        var ref_bot = "@basicBot=";
-        var ind_ref = info.indexOf(ref_bot);
-        if (ind_ref > 0) {
-            var link = info.substring(ind_ref + ref_bot.length, info.length);
-            var ind_space = null;
-            if (link.indexOf(" ") < link.indexOf("\n")) ind_space = link.indexOf(" ");
-            else ind_space = link.indexOf("\n");
-            link = link.substring(0, ind_space);
-            $.get(link, function (json) {
-                if (json !== null && typeof json !== "undefined") {
-                    json_sett = JSON.parse(json);
-                    for (var prop in json_sett) {
-                        basicBot.settings[prop] = json_sett[prop];
-                    }
-                }
-            });
-        }
-
-    };
-
     String.prototype.splitBetween = function (a, b) {
         var self = this;
         self = this.split(a);
@@ -1363,9 +1316,6 @@
             };
 
             Check = setInterval(function(){ detect() }, 2000);
-
-            retrieveSettings();
-            retrieveFromStorage();
             window.bot = basicBot;
             basicBot.roomUtilities.updateBlacklists();
             setInterval(basicBot.roomUtilities.updateBlacklists, 60 * 60 * 1000);
