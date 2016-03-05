@@ -235,8 +235,6 @@
         chatLink: "https://rawgit.com/VenaCzPlay/PlugDJBotCM/master/lang/cs.json",
         chat: null,
         loadChat: loadChat,
-        retrieveSettings: retrieveSettings,
-        retrieveFromStorage: retrieveFromStorage,
         settings: {
             botName: "CM Bot",
             language: "czech",
@@ -245,7 +243,7 @@
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 40, // 1-200
             startupVolume: 100, // 0-100
-            startupEmoji: false, // true or false
+            startupEmoji: true, // true or false
             autowoot: false,
             autoskip: false,
             smartSkip: false,
