@@ -179,7 +179,7 @@
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "2.9.1",
+        version: "2.9.2 [Update 4]",
         status: false,
         name: "CM Bot",
         loggedInID: null,
@@ -219,17 +219,18 @@
             autodisable: true,
             commandCooldown: 30,
             usercommandsEnabled: true,
-            thorCommand: false,
+            thorCommand: true,
             thorCooldown: 10,
             skipPosition: 3,
             skipReasons: [
-                ["tema", "Tato pisnicka se nehodi na tema teto roomky. "],
-                ["op", "Tato pisnicka je na Operator List. "],
-                ["historie", "This song is in the history. "],
-                ["mix", "Hral jsi mix! To je proti pravidlum. "],
-                ["zvuk", "Pisnicka ma blbou kvalitu zvuku nebo zadnou. "],
-                ["18", "Tato pisnicka se nehodi pro mladci uzivatele "],
-                ["nedostupne", "Tato pisnicka je pro nektere uzivatele nedustupna. "]
+                ["tema", "Tato skladba se nehodi na tema teto roomky. "],
+                ["op", "Tato skladba je na OverPlayed listu. "],
+                ["historie", ":repeat: Tato skladba predchvili hrala. :repeat: "],
+                ["mix", "Hral/a jsi mix! To je proti pravidlum. "],
+                ["zvuk", "Sklabla ma nizkou kvalitu zvuku nebo zadnou. "],
+                ["18", "Tato skladba se nehodi pro mladci uzivatele "],
+                ["nedostupne", "Tato skladba je pro nektere uzivatele nedustupna. "]
+				["zasekla", "Tato skladba se zasekla."]
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
@@ -1366,7 +1367,7 @@
                 if (emojibuttonoff.length > 0) {
                     emojibuttonoff[0].click();
                 }
-                API.chatLog(':smile: Emojis enabled.');
+                API.chatLog(':apple: Emojis enabled.');
             }
             else {
                 var emojibuttonon = $(".icon-emoji-on");
