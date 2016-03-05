@@ -92,7 +92,7 @@
     "askskip": "\/me @%%NAME%%, ne\u017e\u00e1dej o p\u0159esko\u010den\u00ed.",
     "spam": "\/me @%%NAME%%, pros\u00edm nespamuj.",
     "roomadvertising": "\/me @%%NAME%%, nepos\u00edlej odkazy na jin\u00e9 m\u00edstnosti pros\u00edm.",
-    "adfly": "\/me @%%NAME%%, pros\u00edm zm\u011b\u0148 si sv\u016fj AutoWoot. Navrhujeme PlugCubed: http:\/\/plugcubed.net\/",
+    "adfly": "\/me @%%NAME%%, pros\u00edm zm\u011b\u0148 si sv\u016fj AutoWoot. Navrhujeme RCS",
     "validgiftags": "\/me [@%%NAME%%] http:\/\/media.giphy.com\/media\/%%ID%%\/giphy.gif [Tags: %%TAGS%%]",
     "invalidgiftags": "\/me [@%%NAME%%] Neplatn\u00fd tag, zkus jin\u00fd. [Tags: %%TAGS%%]",
     "validgifrandom": "\/me [@%%NAME%%] http:\/\/media.giphy.com\/media\/%%ID%%\/giphy.gif [N\u00e1hodn\u00fd GIF]",
