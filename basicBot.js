@@ -229,7 +229,7 @@
                 ["mix", "Hral/a jsi mix! To je proti pravidlum. "],
                 ["zvuk", "Sklabla ma nizkou kvalitu zvuku nebo zadnou. "],
                 ["18", "Tato skladba se nehodi pro mladci uzivatele "],
-                ["nedostupne", "Tato skladba je pro nektere uzivatele nedustupna. "]
+                ["nedostupne", "Tato skladba je pro nektere uzivatele nedustupna. "],
 				["zasekla", "Tato skladba se zasekla."]
             ],
             afkpositionCheck: 15,
