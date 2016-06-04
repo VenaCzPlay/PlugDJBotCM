@@ -3687,6 +3687,7 @@
             }
         }
     },
+    
             boziCommand: {
                 command: 'boží',
                 rank: 'user',
@@ -3701,6 +3702,7 @@
                 }
             }
         }
+    };
 
     loadChat(basicBot.startup);
 }).call(this);
