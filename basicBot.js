@@ -179,9 +179,9 @@
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "2.9.2 [Update 4]",
+        version: "2.9.3 [Update 3]",
         status: false,
-        name: "CM Bot",
+        name: "MMBot",
         loggedInID: null,
         scriptLink: "https://rawgit.com/VenaCzPlay/PlugDJBotCM/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
@@ -189,7 +189,7 @@
         chat: null,
         loadChat: loadChat,
         settings: {
-            botName: "CM Bot",
+            botName: "MMBot",
             language: "czech",
             chatLink: "https://rawgit.com/VenaCzPlay/PlugDJBotCM/master/lang/cs.json",
             scriptLink: "https://rawgit.com/VenaCzPlay/PlugDJBotCM/master/basicBot.js",
@@ -236,7 +236,7 @@
             afkRankCheck: "ambassador",
             motdEnabled: true,
             motdInterval: 5,
-            motd: "Pripoj se na Oficiální Craftmania Server: [IP: play.craftmania.cz] [Web:http://craftmania.cz]",
+            motd: "Bot hostuje @%%NAME%%",
             filterChat: true,
             etaRestriction: false,
             welcome: true,
@@ -1115,7 +1115,7 @@
                     API.moderateDeleteChat(chat.cid);
                 }
                 
-                 var plugRoomLinkPatt = /(\bhttps?:\/\/(stg.)?plug\.dj[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+                 var plugRoomLinkPatt = /(\bhttps?:\/\/?plug\.dj[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
                  if (plugRoomLinkPatt.exec(msg)) {
                     if (perm === 0) {
                         API.sendChat(subChat(basicBot.chat.roomadvertising, {name: chat.un}));
@@ -2973,7 +2973,7 @@
                             var timeElapsed = API.getTimeElapsed();
                             var dj = API.getDJ();
                             var name = dj.username;
-                            var msgSend = '@' + name + ', ';
+                            var msgSend = '\/me @' + name + ', ';
 
                             if (chat.message.length === cmd.length) {
                                 API.sendChat(subChat(basicBot.chat.usedskip, {name: chat.un}));
@@ -3686,7 +3686,21 @@
                 }
             }
         }
-    };
+    },
+            boziCommand: {
+                command: 'boží',
+                rank: 'user',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (typeof basicBot.settings.bozi === "string")
+                            API.sendChat(subChat(basicBot.chat.bozi, {name: chat.un, link: basicBot.settings.bozi}));
+                    }
+                }
+            }
+        }
 
     loadChat(basicBot.startup);
 }).call(this);

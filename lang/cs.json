@@ -205,9 +205,10 @@
     "voteratio": "\/me [@%%NAME%%] @%%USERNAME%% ~ woot\u016f: %%WOOT%%, meh\u016f: %%MEHS%%, pom\u011br (w\/m): %%RATIO%%.",
     "website": "\/me Pros\u00edm nav\u0161tivte na\u0161e webov\u00e9 str\u00e1nky: %%LINK%%",
     "youtube": "\/me [%%NAME%%] Dejte n\u00e1m odb\u011br na  youtube: %%LINK%%",
-    "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%Wooty\/%%GRABS%%Pridani\/%%MEHS%%Mehy.",
+    "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%Woot\/%%GRABS%%Pridani\/%%MEHS%%Meh.",
     "thorNotClose": "\/me @%%NAME%%, nejsi tak daleko od toho aby jsi byl hoden thorova kladiva!",
     "thorcd": "\/me @%%NAME%% muzes zkusit udrzet thorovo kladivo za %%TIME%% minut.",
     "thorWorthy": "\/me @%%NAME%% ty jsi ten uzasny, jsi hoden thorova kladiva :hammer:, gratulujeme!",
     "thorNotWorthy": "\/me @%%NAME%% nejsi hoden thorova kladiva!"
+    "bozi": "\/me %%NAME%% se líbí tato písnička až skáče radostí!! No ty kráso.."
 }
