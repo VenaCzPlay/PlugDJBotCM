@@ -209,6 +209,5 @@
     "thorNotClose": "\/me @%%NAME%%, nejsi tak daleko od toho aby jsi byl hoden thorova kladiva!",
     "thorcd": "\/me @%%NAME%% muzes zkusit udrzet thorovo kladivo za %%TIME%% minut.",
     "thorWorthy": "\/me @%%NAME%% ty jsi ten uzasny, jsi hoden thorova kladiva :hammer:, gratulujeme!",
-    "thorNotWorthy": "\/me @%%NAME%% nejsi hoden thorova kladiva!",
-    "bozi": "\/me %%NAME%% se líbí tato písnička až skáče radostí!! No ty kráso.."
+    "thorNotWorthy": "\/me @%%NAME%% nejsi hoden thorova kladiva!"
 }

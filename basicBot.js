@@ -236,7 +236,7 @@
             afkRankCheck: "ambassador",
             motdEnabled: true,
             motdInterval: 5,
-            motd: "Bot hostuje @%%NAME%%",
+            motd: "Vitej v komunite MineMove Official",
             filterChat: true,
             etaRestriction: false,
             welcome: true,
@@ -2973,7 +2973,7 @@
                             var timeElapsed = API.getTimeElapsed();
                             var dj = API.getDJ();
                             var name = dj.username;
-                            var msgSend = '\/me @' + name + ', ';
+                            var msgSend = '@' + name + ', ';
 
                             if (chat.message.length === cmd.length) {
                                 API.sendChat(subChat(basicBot.chat.usedskip, {name: chat.un}));
