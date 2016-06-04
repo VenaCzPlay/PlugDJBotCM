@@ -21,7 +21,7 @@
         "ti daroval\/a Oreo su\u0161enku se sklenic\u00ed ml\u00e9ka!",
         "ti daroval\/a duhovou su\u0161enku pe\u010denou s l\u00e1skou. :heart:",
         "ti daroval\/a starou su\u0161enku, kterou zapomn\u011bl v de\u0161ti. Je plesniv\u00e1.",
-        "ti pe\u010de \u010derstv\u00e9 su\u0161enky. Von\u00ed b\u00e1je\u010dn\u011b."
+        "ti pe\u010de \u010derstv\u00e9 su\u0161enky. Von\u00ed b\u00e1je\u010dn\u011b.",
 		"ti daroval\/a susenku kterou pekl sam MrWakeCZ!! :o"
     ],
     "balls": [
@@ -209,6 +209,6 @@
     "thorNotClose": "\/me @%%NAME%%, nejsi tak daleko od toho aby jsi byl hoden thorova kladiva!",
     "thorcd": "\/me @%%NAME%% muzes zkusit udrzet thorovo kladivo za %%TIME%% minut.",
     "thorWorthy": "\/me @%%NAME%% ty jsi ten uzasny, jsi hoden thorova kladiva :hammer:, gratulujeme!",
-    "thorNotWorthy": "\/me @%%NAME%% nejsi hoden thorova kladiva!"
+    "thorNotWorthy": "\/me @%%NAME%% nejsi hoden thorova kladiva!",
     "bozi": "\/me %%NAME%% se líbí tato písnička až skáče radostí!! No ty kráso.."
 }
